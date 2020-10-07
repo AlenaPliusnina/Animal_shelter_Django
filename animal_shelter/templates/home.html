@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home page</title>
-</head>
-<body>
-    {% extends 'base.html' %}
-    {% block content %}
+{% extends 'base.html' %}
+{% block content %}
     <div>
         <h2 class="mt-5 text-center font-weight-bold">О нас</h2>
         <p class="mt-3 text-center">Этот сайт создан с целью – спасти жизни брошеных и бездомных питомцев (кошек, собак и попугаев),
@@ -15,6 +8,4 @@
             <img src="/static/images/Cat_dog_parrot.jpg" alt="Фото кошки, собаки и попугая.">
         </div>
     </div>
-    {% endblock %}
-</body>
-</html>
+{% endblock %}
