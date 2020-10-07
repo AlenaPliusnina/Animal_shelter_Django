@@ -1,22 +1,5 @@
 [
 {
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$150000$OyAsKZVy8Him$L6Q9hVV0BMxfSA0urS4CDB1c14k7AY9xLOneI/fadN4=",
-        "last_login": "2020-10-02T13:39:00.056Z",
-        "is_superuser": true,
-        "username": "admin",
-        "first_name": "",
-        "last_name": "",
-        "email": "a564352@gmail.com",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2020-10-02T13:38:17.938Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
     "model": "animal_shelter.animal",
     "pk": 1,
     "fields": {
