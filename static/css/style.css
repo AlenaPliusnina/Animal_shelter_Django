@@ -1,0 +1,29 @@
+.page-header {
+    background: #e3f2fd;
+    margin: 0 0 0 0;
+}
+
+.page-footer {
+    background: #e3f2fd;
+}
+
+.page-header-text {
+    color: #5BA0D3;
+}
+
+.page-footer-text {
+    color: #72797E;
+}
+
+.content {
+    min-height: calc(100vh - 70px);
+}
+
+.pet-card-img {
+    max-height: 400px;
+    min-height: 210px;
+}
+
+.pet-img {
+    max-width: 300px;
+}

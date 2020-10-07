@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href='{% static "css/style.css" %}' >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Animal shelter</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light page-header d-flex flex-wrap">
+        <object class="mr-3 ml-3 mt-1" type="image/svg+xml" data='{% static "images/icons/paw.svg" %}' width="80" height="80">
+            <img src='{% static "images/icons/paw.png" %}' width="80" height="80" alt="image format png" />
+        </object>
+
+        <h2 class="page-header-text mr-5 font-weight-normal">Приют для животных </h2>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ml-3 text-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cats/">Кошки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dogs/">Собаки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/parrots/">Попугаи</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacts/">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer class="page-footer d-flex justify-content-end">
+        <p class="page-footer-text mr-3 mt-4">Контакты разработчика</p>
+        <div class="social-icons mt-3 mr-3 mb-3">
+            <a href="https://github.com/AlenaPliusnina">
+                <img src='{% static "images/icons/github.png" %}' width="45" height="45" alt="image format png" />
+            </a>
+            <a class="ml-2" href="https://www.instagram.com/alenkapliusnina">
+                <img src='{% static "images/icons/instagram.png" %}' width="45" height="45" alt="image format png" />
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
