@@ -17,19 +17,19 @@ from django.conf.global_settings import DATABASES
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&eubb)%sdg^w3p2sa5ica3w==81yi*b%e@+u%v0)jg(wu(xu4c'
-# SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = '&eubb)%sdg^w3p2sa5ica3w==81yi*b%e@+u%v0)jg(wu(xu4c'
+
+## ----- Для Heroku ----- ##
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'my_site.herokuapp.com']
-ALLOWED_HOSTS = ['boiling-scrubland-14840.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'animals-shelter.herokuapp.com']
 
 
 # Application definition
@@ -75,17 +75,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_site.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
+
+## Для работы с postgresql ##
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -96,10 +97,15 @@ DATABASES = {
 #         'PORT': '5432',
 #     }
 # }
-#
-# import dj_database_url
-#
-# DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+## ----------------------- ##
+
+
+## ----- Для Heroku ----- ##
+import dj_database_url
+
+DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+## ----------- ##
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -119,7 +125,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -133,7 +138,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
@@ -143,4 +147,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+## ----- Для Heroku ----- ##
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
