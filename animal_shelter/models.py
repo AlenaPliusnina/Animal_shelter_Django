@@ -4,7 +4,7 @@ from datetime import date
 
 class Animal(models.Model):
     name = models.CharField(max_length=100)
-    breed = models.CharField(max_length=100)
+    breed = models.CharField(max_length=100, null=True)
     eye_color = models.CharField(max_length=100, null=True)
     description = models.TextField()
     certificate = models.BooleanField(default=False)
