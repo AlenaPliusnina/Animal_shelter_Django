@@ -28,7 +28,8 @@ SECRET_KEY = '&eubb)%sdg^w3p2sa5ica3w==81yi*b%e@+u%v0)jg(wu(xu4c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'my_site.herokuapp.com']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'my_site.herokuapp.com']
+ALLOWED_HOSTS = ['boiling-scrubland-14840.herokuapp.com']
 
 
 # Application definition
