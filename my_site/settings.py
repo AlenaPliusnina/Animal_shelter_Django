@@ -29,7 +29,7 @@ SECRET_KEY = '&eubb)%sdg^w3p2sa5ica3w==81yi*b%e@+u%v0)jg(wu(xu4c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'animals-shelter.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'boiling-scrubland-14840.herokuapp.com']
 
 
 # Application definition
@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 ## Для работы с postgresql ##
@@ -101,9 +101,9 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 
 
 ## ----- Для Heroku ----- ##
-import dj_database_url
-
-DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+# import dj_database_url
+#
+# DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
 ## ----------- ##
 
 
@@ -149,4 +149,4 @@ STATICFILES_DIRS = [
 
 
 ## ----- Для Heroku ----- ##
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
