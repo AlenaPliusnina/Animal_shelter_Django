@@ -2,3 +2,4 @@
 app.json
 Procfile
 runtime.txt
+fixtures.json
