@@ -10,15 +10,15 @@
 
 2. Создайт виртуальное окружение: 
     
-    python -m venv env
+       python -m venv env
     
 3. Активируйте виртуальное окружение:
 
-    source env/bin/activate
+       source env/bin/activate
     
 4. Чтобы установить все требуемые библиотеки python в новом окружении выполните команду:
      
-    pip install -r requirements.txt
+       pip install -r requirements.txt
     
   Если у вас macOS до выполнения команды pip install -r requirements.txt выполните команду:
 
@@ -28,11 +28,11 @@
 
 5. Чтбы запустить сервер введите команду:
 
-    python manage.py runserver
+       python manage.py runserver
     
 6. Для входа в администравтивную панель проекта создайте суперпользователя при помощи команды:
 
-    python manage.py createsuperuser
+       python manage.py createsuperuser
  
 
 # Скриншоты
