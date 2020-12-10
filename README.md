@@ -1,4 +1,4 @@
-# Сайт приюта домашних животных / Animal shelter web-site
+# Сайт приюта домашних животных / Animals shelter web-site
 
      Django, Sqlite3
      
