@@ -35,4 +35,20 @@
     python manage.py createsuperuser
  
 
-#                                         Скриншоты
+# Скриншоты
+
+![Главная](/screenshots/screen_1.png)
+
+![Кошки](/screenshots/screen_2.png)
+
+![Кошки подробнее](/screenshots/screen_3.png)
+
+![Собаки](/screenshots/screen_4.png)
+
+![Собаки подробнее](/screenshots/screen_5.png)
+
+![Попугаи](/screenshots/screen_6.png)
+
+![Попугаи подробнее](/screenshots/screen_7.png)
+
+![Контакты](/screenshots/screen_8.png)
